@@ -104,7 +104,7 @@ class Discriminator(nn.Module):
                 nn.LeakyReLU(negative_slope=0.2)
             ),  # (B, nch_d*4, 8, 8) -> (B, nch_g*8, 4, 4)
             'layer4': nn.Conv2d(nch_d * 8, 1, 4, 1, 0)
-            # (B, nch_d*8, 4, 4) -> (B, nch_g*8, 1, 1)
+            # (B, nch_d*8, 4, 4) -> (B, 1, 1, 1)
         })
 
     def forward(self, x):
