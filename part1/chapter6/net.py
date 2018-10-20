@@ -115,5 +115,5 @@ class Discriminator(nn.Module):
         """
         for layer in self.layers.values():  # self.layersの各層で演算を行う
             x = layer(x)
-        return x.view(-1, 1).squeeze(1)     # テンソルの形状を(B, 1)に変更した後に(B,)に変更して戻り値とする
+        return x.squeeze()     # テンソルの形状を(B)に変更して戻り値とする
 
