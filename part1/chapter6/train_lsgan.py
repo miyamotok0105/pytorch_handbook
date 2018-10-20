@@ -101,17 +101,16 @@ def main():
 
             output = netD(real_image)   # 識別器Dで元画像に対する識別信号を出力
             errD_real = criterion(output, real_target)  # 元画像に対する識別信号の損失値
-            errD_real.backward()    # 誤差逆伝播
             D_x = output.mean().item()
 
             fake_image = netG(noise)    # 生成器Gでノイズから贋作画像を生成
             
             output = netD(fake_image.detach())  # 識別器Dで元画像に対する識別信号を出力
             errD_fake = criterion(output, fake_target)  # 贋作画像に対する識別信号の損失値
-            errD_fake.backward()    # 誤差逆電波
             D_G_z1 = output.mean().item()
 
             errD = errD_real + errD_fake    # 識別器Dの全体の損失
+            errD.backward()    # 誤差逆伝播
             optimizerD.step()   # Dのパラメーターを更新
 
             ############################

@@ -147,7 +147,6 @@ def main():
 
             output = netD(real_image_label)     # 識別器Dで元画像とラベルの組み合わせに対する識別信号を出力
             errD_real = criterion(output, real_target)
-            errD_real.backward()
             D_x = output.mean().item()
 
             fake_image = netG(fake_noise_label)     # 生成器Gでラベルに対応した贋作画像を生成
@@ -155,10 +154,10 @@ def main():
 
             output = netD(fake_image_label.detach())    # 識別器Dで贋作画像とラベルの組み合わせに対する識別信号を出力
             errD_fake = criterion(output, fake_target)
-            errD_fake.backward()
             D_G_z1 = output.mean().item()
 
             errD = errD_real + errD_fake
+            errD.backward()
             optimizerD.step()
 
             ############################
