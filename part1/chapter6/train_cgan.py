@@ -23,7 +23,7 @@ def onehot_encode(label, device, n_class=10):
     :return:
     """
     eye = torch.eye(n_class, device=device)
-    # ランダムベクトルあるいは画像と連結するために(B, c_class, 1, 1)のテンソルにして戻す
+    # ランダムベクトルあるいは画像と連結するために(B, c_class, 1, 1)のTensorにして戻す
     return eye[label].view(-1, n_class, 1, 1)   
 
 
@@ -34,9 +34,9 @@ def concat_image_label(image, label, device, n_class=10):
     :param label: ラベル
     :param device: 学習に使用するデバイス。CPUあるいはGPU
     :param n_class: ラベルのクラス数
-    :return:　画像とラベルをチャネル方向に連結したテンソル
+    :return:　画像とラベルをチャネル方向に連結したTensor
     """
-    B, C, H, W = image.shape    # 画像テンソルの大きさを取得
+    B, C, H, W = image.shape    # 画像Tensorの大きさを取得
     
     oh_label = onehot_encode(label, device)         # ラベルをOne-Hotベクトル化
     oh_label = oh_label.expand(B, n_class, H, W)    # 画像のサイズに合わせるようラベルを拡張する
@@ -49,7 +49,7 @@ def concat_noise_label(noise, label, device):
     :param noise: ノイズ
     :param label: ラベル
     :param device: 学習に使用するデバイス。CPUあるいはGPU
-    :return:　ノイズとラベルを連結したテンソル
+    :return:　ノイズとラベルを連結したTensor
     """
     oh_label = onehot_encode(label, device)     # ラベルをOne-Hotベクトル化
     return torch.cat((noise, oh_label), dim=1)  # ノイズとラベルをチャネル方向（dim=1）で連結する
@@ -108,8 +108,8 @@ def main():
     netG.apply(weights_init)
     print(netG)
 
-    # 識別器D。画像とラベルを連結したテンソルが、元画像か贋作画像かを識別する
-    netD = Discriminator(nch=3+10, nch_d=opt.nch_d).to(device)   # 入力テンソルのチャネル数は、画像のチャネル数3にクラス数10を加算したもの
+    # 識別器D。画像とラベルを連結したTensorが、元画像か贋作画像かを識別する
+    netD = Discriminator(nch=3+10, nch_d=opt.nch_d).to(device)   # 入力Tensorのチャネル数は、画像のチャネル数3にクラス数10を加算したもの
     netD.apply(weights_init)
     print(netD)
 
