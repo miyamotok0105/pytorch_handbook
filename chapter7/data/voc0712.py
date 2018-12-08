@@ -33,7 +33,7 @@ VOC_CLASSES = (  # always index 0
 # note: if you used our download scripts, this should be right
 # handbook
 #VOC_ROOT = osp.join(HOME, "data/VOCdevkit/")
-VOC_ROOT = osp.join(HOME, "/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/VOCdevkit")
+VOC_ROOT = osp.join(HOME, "/content/gdrive/My Drive/Colab Notebooks/pytorchapibook/VOCdevkit")
 # handbook
 
 class VOCAnnotationTransform(object):
