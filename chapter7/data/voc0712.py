@@ -30,10 +30,15 @@ VOC_CLASSES = (  # always index 0
     'motorbike', 'person', 'pottedplant',
     'sheep', 'sofa', 'train', 'tvmonitor')
 
-# note: if you used our download scripts, this should be right
 # handbook
+# note: if you used our download scripts, this should be right
 #VOC_ROOT = osp.join(HOME, "data/VOCdevkit/")
-VOC_ROOT = osp.join(HOME, "/content/gdrive/My Drive/Colab Notebooks/pytorchapibook/VOCdevkit")
+# 現在のディレクトリを取得
+dir_cur = osp.dirname(__file__)
+# データセットVOCのディレクトリを取得
+dir_voc = osp.join(dir_cur, "..", "VOCdevkit")
+# データセットVOCの絶対パスを設定
+VOC_ROOT = osp.abspath(dir_voc)
 # handbook
 
 class VOCAnnotationTransform(object):

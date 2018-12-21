@@ -55,7 +55,10 @@ class Detect(Function):
                 # 確信度の閾値を使ってボックスを削除
                 c_mask = conf_scores[cl].gt(self.conf_thresh)
                 scores = conf_scores[cl][c_mask]
-                if scores.dim() == 0:
+                # handbook
+                #if scores.dim() == 0:
+                if scores.size(0) == 0:
+                # handbook
                     continue
                 l_mask = c_mask.unsqueeze(1).expand_as(decoded_boxes)
                 # ボックスのデコード処理
