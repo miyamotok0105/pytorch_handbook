@@ -19,4 +19,9 @@ wget https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth
 wget https://s3.amazonaws.com/amdegroot-models/ssd300_mAP_77.43_v2.pth
 ```
 
+## サポート
+
+返信に数日かかってしまうかもしれませんが、お困りの方は連絡いただければ善処いたします。
+
+miyamotok0105@gmail.com
 
