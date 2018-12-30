@@ -79,7 +79,7 @@ def main():
     np.random.seed(0)
     torch.manual_seed(0)
 
-    trainset = dset.STL10(root='../../dataset/stl10_root', download=True, split='train',
+    trainset = dset.STL10(root='./dataset/stl10_root', download=True, split='train',
                           transform=transforms.Compose([
                               transforms.RandomResizedCrop(64, scale=(88/96, 1.0), ratio=(1., 1.)),
                               transforms.RandomHorizontalFlip(),
@@ -87,7 +87,7 @@ def main():
                               transforms.ToTensor(),
                               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
                           ]))   # ラベルを使用するのでunlabeledを含めない
-    testset = dset.STL10(root='../../dataset/stl10_root', download=True, split='test',
+    testset = dset.STL10(root='./dataset/stl10_root', download=True, split='test',
                          transform=transforms.Compose([
                              transforms.RandomResizedCrop(64, scale=(88/96, 1.0), ratio=(1., 1.)),
                              transforms.RandomHorizontalFlip(),

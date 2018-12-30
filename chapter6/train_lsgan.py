@@ -40,7 +40,7 @@ def main():
     torch.manual_seed(0)
 
     # STL-10のトレーニングデータセットとテストデータセットを読み込む
-    trainset = dset.STL10(root='../../dataset/stl10_root', download=True, split='train+unlabeled',
+    trainset = dset.STL10(root='./dataset/stl10_root', download=True, split='train+unlabeled',
                           transform=transforms.Compose([
                               transforms.RandomResizedCrop(64, scale=(88/96, 1.0), ratio=(1., 1.)),
                               transforms.RandomHorizontalFlip(),
@@ -48,7 +48,7 @@ def main():
                               transforms.ToTensor(),
                               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
                           ]))   # ラベルを使用しないのでラベルなしを混在した'train+unlabeled'を読み込む
-    testset = dset.STL10(root='../../dataset/stl10_root', download=True, split='test',
+    testset = dset.STL10(root='./dataset/stl10_root', download=True, split='test',
                          transform=transforms.Compose([
                              transforms.RandomResizedCrop(64, scale=(88/96, 1.0), ratio=(1., 1.)),
                              transforms.RandomHorizontalFlip(),
