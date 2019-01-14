@@ -19,6 +19,13 @@ wget https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth
 wget https://s3.amazonaws.com/amdegroot-models/ssd300_mAP_77.43_v2.pth
 ```
 
+## 付録
+紙面に記載できなかった内容を補足しています
+
+- table_dataset.py テーブルデータを処理する例として、UCI Machine Learning RepositoryのIrisデータセットをMLPで学習する
+- torch_utils_data.py torch.utils.dataパッケージのいくつかの機能を例示
+- torch_utils_data.ipynb torch.utils.dataパッケージのいくつかの機能を例示(jupyternotebook版)
+
 ## サポート
 
 返信に数日かかってしまうかもしれませんが、お困りの方は連絡いただければ善処いたします。
