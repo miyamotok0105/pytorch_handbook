@@ -17,11 +17,17 @@
 - torch_utils_data.py torch.utils.dataパッケージのいくつかの機能を例示
 - torch_utils_data.ipynb torch.utils.dataパッケージのいくつかの機能を例示(jupyternotebook版)
 
+# ソースの変更
+20190411 7章の物体検出のソースをPyTorch1.0で動くよう修正
+
+
 ## サポート
 
 返信に数日かかってしまうかもしれませんが、お困りの方は連絡いただければ善処いたします。
 
 miyamotok0105@gmail.com
+hei4.1981@gmail.com
+ayukat101699@gmail.com
 
 ## 正誤表
 | ページ | 誤 | 正 | 補足 |
@@ -36,8 +42,9 @@ miyamotok0105@gmail.com
 | 2章 p40：形状チェック2の実行結果OutのTensor形状 | 記載漏れ | (2, 3) |  |
 | 2章 p46：本文 | torch.tensorのデフォルトではrequires_grad =True | torch.tensorのデフォルトではrequires_grad =False | 入力tensorを作成する多くの場合、requires_gradは指定しません。そのため、入力tensorはデフォルトのrequires_grad = Falseになっています。しかし、torch.nn.Linearやtorch.nn.Conv2dなどが持つ重みWやバイアスbはデフォルトでrequires_grad =Trueになっているため、勾配は計算できます。 |
 | 4章 p75：本文 | 以下の例では、nn.Sequentialを使ってクラスを自作していますが、 | 以下の例では、クラスを自作してその内部でnn.Sequentialを使っていますが、 |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| 4章 p82：プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
+| 5章 p108：プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
+| 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
+| 7章 p182～183：本文 | mAP:mean average precise | mAP:mean average precision |  |
+| 7章 p224：プログラム（オフセットのネットワークのリスト確認）の中の表記 | Outがない | Outがあり |  |
+| 7章 p240：正解のデータイメージのボックス1の正解ラベル | 19 | 0 |  |
