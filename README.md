@@ -24,12 +24,12 @@
 miyamotok0105@gmail.com
 
 ## 正誤表
-| ページ | 誤 | 正 |
-|:-----------|:------------|:------------|
-| 2章 p29：1個目のプログラムタイトル | 1次元Tensorの例 | numpyへの変換 |
-| column | column | column |
-| will | will | will |
-| be | be | be |
-| left | right | center |
-| aligned | aligned | aligned |
-
+| ページ | 誤 | 正 | 補足 |
+|:-----------|:------------|:------------|:------------|
+| 2章 p29：1個目のプログラムタイトル | 1次元Tensorの例 | numpyへの変換 |  |
+| 2章 p36：32ビット、64ビットの浮動小数点dtypeの表記 | torh.float　(cがない) | torch.float |  |
+| 2章 p36：8ビット（符号なし、付き）、32ビット（符号付き）、64ビット整数（符号付き）のGPUテンソル | Torch.cudaとtorch.cudaの2つの記載が混在 | torch.cudaに統一 |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
