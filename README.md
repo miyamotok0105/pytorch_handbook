@@ -18,16 +18,16 @@
 - torch_utils_data.ipynb torch.utils.dataパッケージのいくつかの機能を例示(jupyternotebook版)
 
 # ソースの変更
-20190411 7章の物体検出のソースをPyTorch1.0で動くよう修正
+20190411：7章の物体検出のソースをPyTorch1.0で動くよう修正
 
 
 ## サポート
 
 返信に数日かかってしまうかもしれませんが、お困りの方は連絡いただければ善処いたします。
 
-miyamotok0105@gmail.com
-hei4.1981@gmail.com
-ayukat101699@gmail.com
+- miyamotok0105@gmail.com
+- hei4.1981@gmail.com
+- ayukat101699@gmail.com
 
 ## 正誤表
 | ページ | 誤 | 正 | 補足 |
