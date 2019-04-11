@@ -47,6 +47,6 @@
 | 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
 | 7章 p182～183：本文 | mAP:mean average precise | mAP:mean average precision |  |
 | 7章 p209：本文 | 初期設定の実行回数は120,000回です。 | 初期設定の実行回数は12,000回です。 | ColabのGPU利用時間は12時間ですが、パラメータファイルをargs['save_folder']に保存し、args['resume']にパラメータファイルを指定することで、学習を再開することができます。分けて学習することで、12時間以上学習したパラメータファイルを作成できます。 |
-| 7章 p209：プログラム実行 | - | - | 学習実行時に以下のエラーが発生することがあります。これは、Google Driveに格納されたVOCのファイル数が多く、ファイルへのアクセスでタイムアウトが発生していることが原因です。再度実行すると、エラーが解消することがあります。＜エラー＞ OSError: [Errno 5] Input/output error: '/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/chapter7/VOCdevkit/VOC2012/Annotations/2010_003546.xml'＜原因と対応＞https://research.google.com/colaboratory/faq.html#drive-timeout |
+| 7章 p209：プログラム実行 | - | - | 学習実行時に以下のエラーが発生することがあります。これは、Google Driveに格納されたVOCのファイル数が多く、ファイルへのアクセスでタイムアウトが発生していることが原因です。再度実行すると、エラーが解消することがあります。  ＜エラー＞ OSError: [Errno 5] Input/output error: '/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/chapter7/VOCdevkit/VOC2012/Annotations/2010_003546.xml'  ＜原因と対応＞https://research.google.com/colaboratory/faq.html#drive-timeout |
 | 7章 p224：プログラム（オフセットのネットワークのリスト確認）の中の表記 | Outがない | Outがあり |  |
 | 7章 p240：正解のデータイメージのボックス1の正解ラベル | 19 | 0 |  |
