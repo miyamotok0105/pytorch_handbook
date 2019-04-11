@@ -17,9 +17,11 @@
 - torch_utils_data.py torch.utils.dataパッケージのいくつかの機能を例示
 - torch_utils_data.ipynb torch.utils.dataパッケージのいくつかの機能を例示(jupyternotebook版)
 
-## コードの変更
-20190411：7章の物体検出SSDモデルのソースをPyTorch1.0で動くよう修正
+## Google Colaboratory
+- ColabにPyTorch1.0がインストールされているので、Colab利用前の!pip installは不要になりました。
 
+## コードの変更
+- 20190411：7章の物体検出SSDモデルのソースをPyTorch1.0で動くよう修正
 
 ## サポート
 
