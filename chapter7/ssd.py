@@ -8,7 +8,9 @@ Updated by: Takuya Mouri
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
+# handbook
+# from torch.autograd import Variable
+# handbook
 from layers import *
 from data import voc, coco
 import os
@@ -38,7 +40,10 @@ class SSD(nn.Module):
         self.num_classes = num_classes
         self.cfg = (coco, voc)[num_classes == 21]
         self.priorbox = PriorBox(self.cfg)
-        self.priors = Variable(self.priorbox.forward(), volatile=True)
+        # handbook
+        # self.priors = Variable(self.priorbox.forward(), volatile=True)
+        self.priors = self.priorbox.forward()
+        # handbook
         self.size = size
 
         # SSD network
@@ -49,12 +54,12 @@ class SSD(nn.Module):
         # オフセットと確信度のネットワークリスト
         self.loc = nn.ModuleList(head[0])
         self.conf = nn.ModuleList(head[1])
-        
+
         # demo実行時
         if phase == 'test':
             self.softmax = nn.Softmax(dim=-1)
             self.detect = Detect(num_classes, 0, 200, 0.01, 0.45)
-    
+
     # 順伝播
     def forward(self, x):
         """Applies network layers and ops on input image(s) x.
@@ -91,7 +96,7 @@ class SSD(nn.Module):
             x = self.vgg[k](x)
         # Conv7>Reluの計算結果をsourcesに追加
         sources.append(x)
-        
+
         # 追加ネットワークにrelu関数を追加し順伝播
         # 奇数番目の層の計算結果をsourcesに追加
         # apply extra layers and cache source layer outputs

@@ -8,7 +8,9 @@ Updated by: Takuya Mouri
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
+# handbook
+# from torch.autograd import Variable
+# handbook
 from data import coco as cfg
 from ..box_utils import match, log_sum_exp
 
@@ -83,12 +85,19 @@ class MultiBoxLoss(nn.Module):
             match(self.threshold, truths, defaults, self.variance, labels,
                   loc_t, conf_t, idx)
         if self.use_gpu:
-            loc_t = loc_t.cuda()
-            conf_t = conf_t.cuda()
+            # handbook
+            #loc_t = loc_t.cuda()
+            #conf_t = conf_t.cuda()
+            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+            loc_t = loc_t.to(device)
+            conf_t = conf_t.to(device)
+            # handbook
         # wrap targets
-        loc_t = Variable(loc_t, requires_grad=False)
-        conf_t = Variable(conf_t, requires_grad=False)
-        
+        # handbook
+        #loc_t = Variable(loc_t, requires_grad=False)
+        #conf_t = Variable(conf_t, requires_grad=False)
+        # handbook
+
         # クラス番号が0より大きいPositiveのボックスのリスト作成
         pos = conf_t > 0
         # Positiveのボックス数
