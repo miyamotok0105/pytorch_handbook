@@ -23,3 +23,13 @@
 
 miyamotok0105@gmail.com
 
+## 正誤表
+| ページ | 誤 | 正 |
+|:-----------|:------------|:------------|
+| 2章 p29：1個目のプログラムタイトル | 1次元Tensorの例 | numpyへの変換 |
+| column | column | column |
+| will | will | will |
+| be | be | be |
+| left | right | center |
+| aligned | aligned | aligned |
+
