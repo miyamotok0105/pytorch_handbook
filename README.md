@@ -48,6 +48,7 @@
 | 2章 p40：形状チェック2の実行結果OutのTensor形状 | 記載漏れ | (2, 3) |  |
 | 2章 p46：本文 | torch.tensorのデフォルトではrequires_grad =True | torch.tensorのデフォルトではrequires_grad =False | 入力tensorを作成する多くの場合、requires_gradは指定しません。そのため、入力tensorはデフォルトのrequires_grad = Falseになっています。しかし、torch.nn.Linearやtorch.nn.Conv2dなどが持つ重みWやバイアスbはデフォルトでrequires_grad =Trueになっているため、勾配は計算できます。 |
 | 4章 p75：本文 | 以下の例では、nn.Sequentialを使ってクラスを自作していますが、 | 以下の例では、クラスを自作してその内部でnn.Sequentialを使っていますが、 |  |
+| 4章 p80：Pillowのプログラムの変数 | img | image |  |
 | 4章 p82：プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
 | 5章 p108：プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
 | 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
