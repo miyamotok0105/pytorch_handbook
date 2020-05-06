@@ -58,3 +58,4 @@
 | 7章 p209：プログラム実行 | - | - | 学習実行時に以下のエラーが発生することがあります。これは、Google Driveに格納されたVOCのファイル数が多く、ファイルへのアクセスでタイムアウトが発生していることが原因です。再度実行すると、エラーが解消することがあります。<br>＜エラー＞OSError: [Errno 5] Input/output error: '/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/chapter7/VOCdevkit/VOC2012/Annotations/2010_003546.xml'<br>＜原因と対応＞https://research.google.com/colaboratory/faq.html#drive-timeout |
 | 7章 p224：プログラム（オフセットのネットワークのリスト確認）の中の表記 | Outがない | Outがあり |  |
 | 7章 p240：正解のデータイメージのボックス1の正解ラベル | 19 | 0 |  |
+| 11章 p390：SLT-10のトレーニングデータ、テストデータ、ラベルなし | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
