@@ -1,0 +1,13 @@
+ベースネットワークと学習済みモデルの2つのパラメータファイルを
+weightsフォルダに格納お願いします。
+
+【パラメータファイル】
+●ベースネットワーク
+https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth
+
+●学習済みモデル
+https://s3.amazonaws.com/amdegroot-models/ssd300_mAP_77.43_v2.pth
+
+【参考】
+●ファイル取得元リンク
+https://github.com/amdegroot/ssd.pytorch
