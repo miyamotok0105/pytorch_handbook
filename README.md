@@ -53,6 +53,7 @@
 | 4章 p80：Pillowのプログラムの変数 | img | image |  |
 | 4章 p82：プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
 | 4章 p82：本文 | できあががったカスタムデータセットは | できあがったカスタムデータセットは |  |
+| 4章 section4_2.ipynb | custom_test_dataset = CustomDataset(root, data_transforms["val"]) | custom_test_dataset = CustomDataset(root, data_transforms["val"], train=False) | 書籍本文では割愛されている、テストデータセットのデータローダーの作成部分です。 |
 | 5章 p108：プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
 | 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
 | 7章 p182～183：本文 | mAP:mean average precise | mAP:mean average precision |  |
