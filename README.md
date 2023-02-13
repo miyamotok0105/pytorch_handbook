@@ -49,7 +49,7 @@
 | 2章 p39：1個目のプログラムのメソッド | .dtype | .type() |  |
 | 2章 p40：形状チェック2の実行結果OutのTensor形状 | 記載漏れ | (2, 3) |  |
 | 2章 p46：本文 | torch.tensorのデフォルトではrequires_grad =True | torch.tensorのデフォルトではrequires_grad =False | 入力tensorを作成する多くの場合、requires_gradは指定しません。そのため、入力tensorはデフォルトのrequires_grad = Falseになっています。しかし、torch.nn.Linearやtorch.nn.Conv2dなどが持つ重みWやバイアスbはデフォルトでrequires_grad =Trueになっているため、勾配は計算できます。 |
-| 2章 p51: 本文 | $$ l(y, t) = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log(\exp(y_i^k))}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot y_i^k}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] $$ | $$ l(y, t) = -\frac{1}{B} \sum_{i=1}^{B} \left[ \sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log \left( \frac{\exp(y_i^k)}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right) \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \sum_{k=0}^{N-1} w^k \cdot t_i^k \cdot \left( y_i^k - \log\left(\sum_{j=0}^{N-1}\exp(y_i^j) \right) \right) \right]$$ | |
+| 2章 p51: 本文 | ソフトマックス交差エントロピー損失の数式 | 本README下部の記載を参照ください。 | |
 | 3章 p65: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | |
 | 3章 p66: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | |
 | 4章 p75：本文 | 以下の例では、nn.Sequentialを使ってクラスを自作していますが、 | 以下の例では、クラスを自作してその内部でnn.Sequentialを使っていますが、 |  |
@@ -79,3 +79,11 @@
 | 10章 p365: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | |
 | 10章 p365: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | |
 | 11章 p390: SLT-10のトレーニングデータ、テストデータ、ラベルなしのデータ数 | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
+
+**2章 p51 誤**
+
+$$ l(y, t) = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log(\exp(y_i^k))}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot y_i^k}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] $$
+
+**2章 p51 正**
+
+$$ l(y, t) = -\frac{1}{B} \sum_{i=1}^{B} \left[ \sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log \left( \frac{\exp(y_i^k)}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right) \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \sum_{k=0}^{N-1} w^k \cdot t_i^k \cdot \left( y_i^k - \log\left(\sum_{j=0}^{N-1}\exp(y_i^j) \right) \right) \right]$$
