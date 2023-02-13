@@ -82,8 +82,8 @@
 
 **2章 p51 誤**
 
-$$ l(y, t) = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log(\exp(y_i^k))}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot y_i^k}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right] $$
+$$ l(y, t) = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum\nolimits_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log(\exp(y_i^k))}{\sum\nolimits_{j=0}^{N-1}\exp(y_i^j)} \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \frac{\sum\nolimits_{k=0}^{N-1}w^k \cdot t_i^k \cdot y_i^k}{\sum\nolimits_{j=0}^{N-1}\exp(y_i^j)} \right] $$
 
 **2章 p51 正**
 
-$$ l(y, t) = -\frac{1}{B} \sum_{i=1}^{B} \left[ \sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log \left( \frac{\exp(y_i^k)}{\sum_{j=0}^{N-1}\exp(y_i^j)} \right) \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \sum_{k=0}^{N-1} w^k \cdot t_i^k \cdot \left( y_i^k - \log\left(\sum_{j=0}^{N-1}\exp(y_i^j) \right) \right) \right]$$
+$$ l(y, t) = -\frac{1}{B} \sum_{i=1}^{B} \left[ \sum_{k=0}^{N-1}w^k \cdot t_i^k \cdot \log \left( \frac{\exp(y_i^k)}{\sum\nolimits_{j=0}^{N-1}\exp(y_i^j)} \right) \right] = -\frac{1}{B}\sum_{i=1}^B \left[ \sum_{k=0}^{N-1} w^k \cdot t_i^k \cdot \left( y_i^k - \log\left(\sum_{j=0}^{N-1}\exp(y_i^j) \right) \right) \right]$$
