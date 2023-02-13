@@ -30,11 +30,11 @@ def onehot_encode(label, device, n_class=10):
 def concat_image_label(image, label, device, n_class=10):
     """
     画像とラベルを連結する
-    :param image:　画像
+    :param image: 画像
     :param label: ラベル
     :param device: 学習に使用するデバイス。CPUあるいはGPU
     :param n_class: ラベルのクラス数
-    :return:　画像とラベルをチャネル方向に連結したTensor
+    :return: 画像とラベルをチャネル方向に連結したTensor
     """
     B, C, H, W = image.shape    # 画像Tensorの大きさを取得
     
@@ -49,7 +49,7 @@ def concat_noise_label(noise, label, device):
     :param noise: ノイズ
     :param label: ラベル
     :param device: 学習に使用するデバイス。CPUあるいはGPU
-    :return:　ノイズとラベルを連結したTensor
+    :return: ノイズとラベルを連結したTensor
     """
     oh_label = onehot_encode(label, device)     # ラベルをOne-Hotベクトル化
     return torch.cat((noise, oh_label), dim=1)  # ノイズとラベルをチャネル方向（dim=1）で連結する
@@ -100,7 +100,7 @@ def main():
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size,
                                              shuffle=True, num_workers=int(opt.workers))
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print('device:', device)
 
     # 生成器G。ランダムベクトルとラベルを連結したベクトルから贋作画像を生成する

@@ -63,7 +63,7 @@ def main():
                                              shuffle=True, num_workers=int(opt.workers))
 
     # 学習に使用するデバイスを得る。可能ならGPUを使用する
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print('device:', device)
 
     # 生成器G。ランダムベクトルから贋作画像を生成する
