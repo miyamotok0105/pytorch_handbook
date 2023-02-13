@@ -23,7 +23,7 @@
 
 - 20190411：7章の物体検出SSDモデルのソースをPyTorch1.0で動くよう修正
 - 20200506：7章の物体検出SSDモデルのソースをPyTorch1.5で動くよう修正
-
+- 20230213: 文字列は基本的にシングルクォーテーションを使用するよう統一。一部のインデントが2スペースだったものを4スペースに修正。
 
 ## サポート
 
@@ -54,17 +54,27 @@
 | 4章 p75：本文 | 以下の例では、nn.Sequentialを使ってクラスを自作していますが、 | 以下の例では、クラスを自作してその内部でnn.Sequentialを使っていますが、 |  |
 | 4章 p77: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | section4_2.ipynb、section4_3.ipynbも同様です。 |
 | 4章 p77: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | section4_2.ipynb、section4_3.ipynbも同様です。 |
-| 4章 p80：Pillowのプログラムの変数 | img | image |  |
-| 4章 p82：プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
-| 4章 p82：本文 | できあががったカスタムデータセットは | できあがったカスタムデータセットは |  |
+| 4章 p80: Pillowのプログラムの変数 | img | image |  |
+| 4章 p82: プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
+| 4章 p82: 本文 | できあががったカスタムデータセットは | できあがったカスタムデータセットは |  |
+| 4章 p93: 本文| torchvidsion.models | torchvision.models | |
 | 4章 section4_2.ipynb | custom_test_dataset = CustomDataset(root, data_transforms["val"]) | custom_test_dataset = CustomDataset(root, data_transforms["val"], train=False) | 書籍本文では割愛されている、テストデータセットの作成部分です。 |
-| 5章 p108：プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
-| 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
-| 7章 p182～183：本文 | mAP:mean average precise | mAP:mean average precision |  |
-| 7章 p209：本文 | 初期設定の実行回数は120,000回です。 | 初期設定の実行回数は12,000回です。 | ColabのGPU利用時間は12時間ですが、パラメータファイルをargs['save_folder']に保存し、args['resume']にパラメータファイルを指定することで、学習を再開することができます。分けて学習することで、12時間以上学習したパラメータファイルを作成できます。 |
-| 7章 p209：プログラム実行 | - | - | 学習実行時に以下のエラーが発生することがあります。これは、Google Driveに格納されたVOCのファイル数が多く、ファイルへのアクセスでタイムアウトが発生していることが原因です。再度実行すると、エラーが解消することがあります。<br>＜エラー＞OSError: [Errno 5] Input/output error: '/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/chapter7/VOCdevkit/VOC2012/Annotations/2010_003546.xml'<br>＜原因と対応＞https://research.google.com/colaboratory/faq.html#drive-timeout |
-| 7章 p224：プログラム（オフセットのネットワークのリスト確認）の中の表記 | Outがない | Outがあり |  |
-| 7章 p240：正解のデータイメージのボックス1の正解ラベル | 19 | 0 |  |
+| 5章 p108: プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
+| 5章 p110: プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
+| 6章 p165: 本文 | 'tain+unlabeled' | 'train+unlabeled' | |
+| 6章 p167: 本文 | ずなわち | すなわち | |
+| 6章 p172: プログラム| One-Hoe | One-Hot | |
+| 6章 p176: 本文 | real_image_lagel | real_image_label | |
+| 7章 p182～183: 本文 | mAP:mean average precise | mAP:mean average precision |  |
+| 7章 p192: 本文 | 同じクラスのバウンディングボックス通し | 同じクラスのバウンディングボックス同士 | |
+| 7章 p209: 本文 | 初期設定の実行回数は120,000回です。 | 初期設定の実行回数は12,000回です。 | ColabのGPU利用時間は12時間ですが、パラメータファイルをargs['save_folder']に保存し、args['resume']にパラメータファイルを指定することで、学習を再開することができます。分けて学習することで、12時間以上学習したパラメータファイルを作成できます。 |
+| 7章 p209: プログラム実行 | - | - | 学習実行時に以下のエラーが発生することがあります。これは、Google Driveに格納されたVOCのファイル数が多く、ファイルへのアクセスでタイムアウトが発生していることが原因です。再度実行すると、エラーが解消することがあります。<br>＜エラー＞OSError: [Errno 5] Input/output error: '/content/gdrive/My Drive/Colab Notebooks/pytorch_handbook/chapter7/VOCdevkit/VOC2012/Annotations/2010_003546.xml'<br>＜原因と対応＞https://research.google.com/colaboratory/faq.html#drive-timeout |
+| 7章 p224: プログラム（オフセットのネットワークのリスト確認）の中の表記 | Outがない | Outがあり |  |
+| 7章 p240: 正解のデータイメージのボックス1の正解ラベル | 19 | 0 |  |
+| 8章 p262: 活用メモ | OneHot-Encording | OneHot-Encoding | PyTorch1.系ではtorch.nn.functional.one_hotが使用できます。 |
+| 8章 p285: 本文 | - | 実数を四捨五入で整数に丸めます。 | 端数がちょうど0.5のときは結果が偶数になるよう丸められます。 |
+| 9章 p297: 活用メモ | Flattend Covolution | Flattened Covolution | |
+| 9章 p297: 活用メモ | Flattend Net | Flattened Net | |
 | 10章 p365: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | |
 | 10章 p365: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | |
-| 11章 p390：SLT-10のトレーニングデータ、テストデータ、ラベルなしのデータ数 | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
+| 11章 p390: SLT-10のトレーニングデータ、テストデータ、ラベルなしのデータ数 | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
