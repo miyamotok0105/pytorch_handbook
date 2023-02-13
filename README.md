@@ -50,10 +50,12 @@
 | 2章 p40：形状チェック2の実行結果OutのTensor形状 | 記載漏れ | (2, 3) |  |
 | 2章 p46：本文 | torch.tensorのデフォルトではrequires_grad =True | torch.tensorのデフォルトではrequires_grad =False | 入力tensorを作成する多くの場合、requires_gradは指定しません。そのため、入力tensorはデフォルトのrequires_grad = Falseになっています。しかし、torch.nn.Linearやtorch.nn.Conv2dなどが持つ重みWやバイアスbはデフォルトでrequires_grad =Trueになっているため、勾配は計算できます。 |
 | 4章 p75：本文 | 以下の例では、nn.Sequentialを使ってクラスを自作していますが、 | 以下の例では、クラスを自作してその内部でnn.Sequentialを使っていますが、 |  |
+| 4章 p77: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | section4_2.ipynb、section4_3.ipynbも同様 |
+| 4章 p77: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | section4_2.ipynb、section4_3.ipynbも同様 |
 | 4章 p80：Pillowのプログラムの変数 | img | image |  |
 | 4章 p82：プログラム 1行目のtransforms.Nomalizeの引数 | ([0.485, 0.456, 0.406], [0.229, 0.224,0.225]) | ([0.5, 0.5, 0.5], [0.5, 0.5,0.5]) |  |
 | 4章 p82：本文 | できあががったカスタムデータセットは | できあがったカスタムデータセットは |  |
-| 4章 section4_2.ipynb | custom_test_dataset = CustomDataset(root, data_transforms["val"]) | custom_test_dataset = CustomDataset(root, data_transforms["val"], train=False) | 書籍本文では割愛されている、テストデータセットのデータローダーの作成部分です。 |
+| 4章 section4_2.ipynb | custom_test_dataset = CustomDataset(root, data_transforms["val"]) | custom_test_dataset = CustomDataset(root, data_transforms["val"], train=False) | 書籍本文では割愛されている、テストデータセットの作成部分です。 |
 | 5章 p108：プログラムタイトル | シーケンスが揃っていないデータのLSTM | シーケンスが揃っているデータのLSTM |  |
 | 5章 p110：プログラムタイトル | シーケンス長が揃っているデータのLSTM | シーケンス長が揃っているデータのLSTMCell |  |
 | 7章 p182～183：本文 | mAP:mean average precise | mAP:mean average precision |  |
