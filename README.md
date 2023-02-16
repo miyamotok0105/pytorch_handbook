@@ -9,6 +9,24 @@
 - 第7章：物体検出    
 - 第8章〜11章：PyTorchのAPI    
 
+## 対応バージョン
+
+> python==3.6
+>
+> torch==0.4.1
+>
+> torchvision==0.2.1
+> 
+> torchtext==0.3.1
+
+本書のサンプルコードはPyTorch0.4.1で動作することを確認しています。
+
+PyTorch0.4.1が動作する環境をご用意の上、コードを実行ください。
+
+2023年2月現在、google colabではPyTorch0.4.1をGPUで実行することが難しい状況です。本リポジトリのappendixに、PyTorch0.4.1 CPU版をgoogle colabに導入するnotebook があります。GPUが使用できないため学習することは困難ですが、google colabで学習を実行せずコードの挙動だけ確認されたい方はnotebookを御参考ください。
+
+なお、第7章のコードはPyTorch1.5で動作することを確認済みです。
+
 
 ## 付録
 紙面に記載できなかった内容を補足しています
@@ -16,6 +34,7 @@
 - table_dataset.py テーブルデータを処理する例として、UCI Machine Learning RepositoryのIrisデータセットをMLPで学習する
 - torch_utils_data.py torch.utils.dataパッケージのいくつかの機能を例示
 - torch_utils_data.ipynb torch.utils.dataパッケージのいくつかの機能を例示(jupyternotebook版)
+- old_torch.setting.ipynb google colabでPyTorch0.4.1をインストールする方法。ただしCPU版であることに注意
 
 
 ## コードの変更
