@@ -78,6 +78,7 @@
 | 9章 p297: 活用メモ | Flattend Net | Flattened Net | |
 | 10章 p365: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | |
 | 10章 p365: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | |
+| 10章 p367: プログラム | train_loss, train_acc, val_loss, val_acc | train_loss_list, train_acc_list, val_loss_list, val_acc_list | p368からp376までのプログラムも同じく修正になります。 |
 | 11章 p390: SLT-10のトレーニングデータ、テストデータ、ラベルなしのデータ数 | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
 
 **2章 p51 誤**
