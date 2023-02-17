@@ -98,6 +98,11 @@ PyTorch0.4.1が動作する環境をご用意の上、コードを実行くだ�
 | 10章 p365: プログラム | avg_train_loss = train_loss / len(train_loader.dataset) | avg_train_loss = train_loss / len(train_loader) | |
 | 10章 p365: プログラム | avg_val_loss = val_loss / len(test_loader.dataset) | avg_val_loss = val_loss / len(test_loader) | |
 | 10章 p367: プログラム | train_loss, train_acc, val_loss, val_acc | train_loss_list, train_acc_list, val_loss_list, val_acc_list | p368からp376までのプログラムも同じく修正になります。 |
+| 10章 p371: プログラム | scheduler = LambdaLR(optimizer, lr_lambda=[lambda1]) | scheduler = LambdaLR(opt, lr_lambda=[lambda1]) | |
+| 10章 p372: プログラム | scheduler = StepLR(optimizer, step_size=2, gamma=0.1) | scheduler = StepLR(opt, step_size=2, gamma=0.1) | |
+| 10章 p373: プログラム | scheduler = MultiStepLR(optimizer, milestones=[5,10], gamma=0.1) | scheduler = MultiStepLR(opt, milestones=[5,10], gamma=0.1) | |
+| 10章 p374: プログラム | scheduler = ExponentialLR(optimizer, gamma=0.1) | scheduler = ExponentialLR(opt, gamma=0.1) | |
+| 10章 p376: プログラム | scheduler = ReduceLROnPlateau(optimizer, 'min', patience=2) | scheduler = ReduceLROnPlateau(opt, 'min', patience=2) | |
 | 11章 p390: SLT-10のトレーニングデータ、テストデータ、ラベルなしのデータ数 | 5000枚、5000枚、8000枚 | 5000枚、8000枚、100000枚 |  |
 
 **2章 p51 誤**
