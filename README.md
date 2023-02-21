@@ -1,5 +1,7 @@
 # PyTorchニューラルネットワーク実装ハンドブック
 
+[![書影](431838.jpg)](https://www.shuwasystem.co.jp/book/9784798055473.html)
+
 - 第1章：PyTorchと開発環境    
 - 第2章：PyTorchの基礎    
 - 第3章：PyTorchを使ったニューラルネットワーク基礎    
