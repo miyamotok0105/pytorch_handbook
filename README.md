@@ -11,7 +11,7 @@
 
 ## 対応バージョン
 
-本書のサンプルコードはPyTorch 0.4.1あるいはPyTorch 1.5.0の環境で動作することを確認しています。いずれかが動作する環境をご用意の上、コードを実行ください。
+本書のサンプルコードはPyTorch 0.4.1および、PyTorch 1.5.0の環境で動作することを確認しています。いずれかが動作する環境をご用意の上、コードを実行ください。
 
 **PyTorch 0.4.1**
 
@@ -33,11 +33,11 @@
 >
 > torchtext==0.3.1
 
-本書のサンプルコードはPyTorch 1.5.0でも動作することを確認していますが、コードの書き方は執筆時のバージョンであったPyTorch 0.4.1に合わせたものになっています。一部のコードは最新のPyTorchのバージョンには適していない書き方になっている点にご注意ください。
+本書のサンプルコードはPyTorch 1.5.0でも動作することを確認していますが、コードの書き方は執筆時のバージョンであったPyTorch 0.4.1に合わせたものになっています。一部のコードは、最新のPyTorchを使えばよりスマートに記述できる場合がある点にご注意ください。
 
-2023年2月現在、google colabではPyTorch 0.4.1をGPUで実行する環境を構築することが難しい状況です。本リポジトリのappendixに、PyTorch 0.4.1 CPU版をgoogle colabに導入するnotebook があります。GPUが使用できないため学習することは困難ですが、google colabで0.4.1の挙動だけ確認されたい方はappendixのnotebookを御参考ください。
+2023年2月現在、google colabではPyTorch 0.4.1をGPUで実行する環境を構築することが難しい状況です。本リポジトリのappendixに、PyTorch 0.4.1 CPU版をgoogle colabに導入するnotebookを用意しました。GPUが使用できないため学習することは困難ですが、google colabで0.4.1の挙動だけ確認されたい方はappendixのold_torch_setting.ipynbを御参考ください。
 
-サンプルコードのnotebookの先頭セルには、google colabでPyTorch 1.5.0の環境を構築するセルが用意していあります。google colabでPyTorch 1.5.0環境を用意されたい方は、それぞれのnotebookで先頭セルのコメントアウトを解除してセルを実行ください。
+サンプルコードのnotebookの先頭セルには、google colabでPyTorch 1.5.0の環境を構築するセルが用意してあります。google colabでPyTorch 1.5.0環境を用意されたい方は、それぞれのnotebookで先頭セルのコメントアウトを解除してセルを実行してください。
 
 
 
