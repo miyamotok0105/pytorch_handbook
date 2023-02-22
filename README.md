@@ -55,7 +55,7 @@
 
 2023年2月現在、google colabではPyTorch 0.4.1をGPUで実行する環境を構築することが難しい状況です。本リポジトリのappendixに、PyTorch 0.4.1 CPU版をgoogle colabに導入するnotebookを用意しました。GPUが使用できないため学習することは困難ですが、google colabで0.4.1の挙動だけ確認されたい方はappendixのold_torch_setting.ipynbを御参考ください。
 
-サンプルコードのnotebookの先頭セルには、google colabでPyTorch 1.5.0の環境を構築するセルが用意してあります。google colabでPyTorch 1.5.0環境を用意されたい方は、それぞれのnotebookで先頭セルのコメントアウトを解除してセルを実行してください。
+サンプルコードのnotebookの先頭セルには、google colabでPyTorch 1.5.0の環境を構築するセルが用意してあります。PyTorch 1.5.0ではGPUを使った学習と推論が可能です。google colabでPyTorch 1.5.0環境を用意されたい方は、それぞれのnotebookで先頭セルのコメントアウトを解除してセルを実行してください。
 
 
 
