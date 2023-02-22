@@ -24,6 +24,14 @@
 > torchvision==0.2.1
 > 
 > torchtext==0.3.1
+> 
+> numpy==1.14.6
+>
+> matplotlib==2.1.2
+> 
+> Pillow==5.0.0
+>
+> opencv-python==3.4.3.18
 
 **PyTorch 1.5.0**
 
@@ -34,6 +42,14 @@
 > torchvision==0.6.0
 >
 > torchtext==0.3.1
+> 
+> numpy==1.21.6
+>
+> matplotlib==3.2.2
+> 
+> Pillow==7.1.2
+>
+> opencv-python==4.6.0
 
 本書のサンプルコードはPyTorch 1.5.0でも動作することを確認していますが、コードの書き方は執筆時のバージョンであったPyTorch 0.4.1に合わせたものになっています。一部のコードは、最新のPyTorchを使えばよりスマートに記述できる場合がある点にご注意ください。
 
